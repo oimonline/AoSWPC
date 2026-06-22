@@ -23,7 +23,7 @@ export class AppError extends Error {
   }
 }
 
-export type SizeMode = "auto" | "half-a4" | "full-a4";
+export type SizeMode = "auto" | "third-a4" | "half-a4" | "full-a4";
 export type ResolvedSize = Exclude<SizeMode, "auto">;
 
 export interface WarscrollStats {

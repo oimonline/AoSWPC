@@ -95,6 +95,7 @@ try {
   });
 
   const batch = await inspectBatchAndPrint(page);
+  const thirdA4 = await inspectThirdA4(page);
   const narrow = await inspectNarrowViewport(page);
   const userImport = await inspectUserImport(page);
 
@@ -114,6 +115,7 @@ try {
     fulcrumClean,
     colossusSourceLike,
     batch,
+    thirdA4,
     narrow,
     userImport,
     forbiddenRequests,
@@ -160,6 +162,16 @@ try {
     batch.printOverflow
   ) {
     throw new Error(`Batch print verification failed: ${JSON.stringify(batch)}`);
+  }
+
+  if (
+    !thirdA4.optionAvailable ||
+    !thirdA4.threeCardsSelected ||
+    !thirdA4.threeCardsOnOnePage ||
+    !thirdA4.printPreservesThirdSize ||
+    thirdA4.printOverflow
+  ) {
+    throw new Error(`Third A4 verification failed: ${JSON.stringify(thirdA4)}`);
   }
 
   if (narrow.documentOverflowX || narrow.previewHasHorizontalScroll) {
@@ -290,6 +302,71 @@ async function inspectBatchAndPrint(page) {
     printHidesCatalogue: print.catalogueDisplay === "none" && print.resultsDisplay === "none",
     printShowsCards: print.names.length === 2,
     printPreservesStyle: print.styles.every((style) => style === "wahapedia-like"),
+    printOverflow: print.overflow
+  };
+}
+
+async function inspectThirdA4(page) {
+  await clearSelected(page);
+  await setSearch(page, "");
+  await setFaction(page, "");
+  await setCheckbox(page, "#hide-no-points", false);
+  await setCheckbox(page, "#hide-no-unit-size", false);
+  await setStyle(page, "clean");
+  await setSize(page, "third-a4");
+
+  await searchAndSelect(page, "Skyforge Sentinels", "Skyforge Sentinels");
+  await searchAndSelect(page, "Lantern Bastion", "Lantern Bastion");
+  await searchAndSelect(page, "Argent Fulcrum", "Argent Fulcrum");
+  await page.waitForFunction(
+    () => document.querySelectorAll(".print-stage .batch-print-card").length === 3,
+    { timeout: 5000 }
+  );
+  await new Promise((resolveDelay) => setTimeout(resolveDelay, 250));
+
+  const screen = await page.evaluate(() => {
+    const optionAvailable = Array.from(document.querySelectorAll("#size-mode option")).some(
+      (option) => option.value === "third-a4" && option.textContent?.includes("3/page")
+    );
+    const pages = Array.from(document.querySelectorAll(".print-stage .batch-print-page"));
+    const cards = Array.from(document.querySelectorAll(".print-stage .batch-print-card"));
+
+    return {
+      optionAvailable,
+      pageCount: pages.length,
+      pageTypes: pages.map((page) => page.dataset.batchPage),
+      cardSizes: cards.map((card) => card.dataset.batchCardSize),
+      cardHeights: cards.map((card) => Math.round(card.getBoundingClientRect().height))
+    };
+  });
+
+  await page.emulateMediaType("print");
+  const print = await page.evaluate(() => {
+    const pages = Array.from(document.querySelectorAll(".print-stage .batch-print-page"));
+    const cards = Array.from(document.querySelectorAll(".print-stage .batch-print-card"));
+    const warscrollCards = Array.from(document.querySelectorAll(".print-stage .warscroll-card"));
+
+    return {
+      pageCount: pages.length,
+      pageTypes: pages.map((page) => page.dataset.batchPage),
+      names: cards.map((item) => item.dataset.batchCardName),
+      sizes: cards.map((item) => item.dataset.batchCardSize),
+      overflow: warscrollCards.some(
+        (card) => card.scrollHeight > card.clientHeight + 1 || card.scrollWidth > card.clientWidth + 1
+      )
+    };
+  });
+  await page.emulateMediaType("screen");
+
+  return {
+    ...screen,
+    print,
+    threeCardsSelected:
+      print.names.includes("Skyforge Sentinels") &&
+      print.names.includes("Lantern Bastion") &&
+      print.names.includes("Argent Fulcrum"),
+    threeCardsOnOnePage: print.pageCount === 1 && print.pageTypes[0] === "third",
+    printPreservesThirdSize: print.sizes.length === 3 && print.sizes.every((size) => size === "third-a4"),
     printOverflow: print.overflow
   };
 }
@@ -536,11 +613,13 @@ async function readSelectedCardMeasurement(page) {
     const batchCard = document.querySelector(".print-stage .batch-print-card");
     const card = batchCard?.querySelector(".warscroll-card");
     const rect = card?.getBoundingClientRect();
+    const size = batchCard?.dataset.batchCardSize;
+    const resolvedSize =
+      size === "third-a4" ? "Third A4" : size === "full-a4" ? "Full A4" : "Half A4";
 
     return {
       title: card?.querySelector("[data-card-title]")?.textContent ?? "",
-      resolvedSize:
-        batchCard?.dataset.batchCardSize === "full-a4" ? "Full A4" : "Half A4",
+      resolvedSize,
       cardStyle: card?.dataset.cardStyle ?? null,
       compact: card?.classList.contains("is-compact") ?? false,
       overflow: card

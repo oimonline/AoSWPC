@@ -481,6 +481,10 @@ function buildFactionOptions(entries: CatalogueEntry[]) {
 }
 
 function formatSize(size: ResolvedSize) {
+  if (size === "third-a4") {
+    return "Third A4";
+  }
+
   return size === "half-a4" ? "Half A4" : "Full A4";
 }
 

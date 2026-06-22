@@ -42,8 +42,16 @@ export function SelectedPreviewCard({
 
     const isOverflowing = hasPrintableOverflow(frame);
 
+    if (resolvedSize === "third-a4") {
+      onAutoFitResult(warscroll.id, {
+        compact: false,
+        size: isOverflowing ? "half-a4" : "third-a4"
+      });
+      return;
+    }
+
     if (resolvedSize === "half-a4") {
-      // At half-A4, never use compact — just promote to full if overflowing
+      // At half-A4, never use compact; just promote to full if overflowing.
       onAutoFitResult(warscroll.id, {
         compact: false,
         size: isOverflowing ? "full-a4" : "half-a4"
@@ -75,7 +83,7 @@ export function SelectedPreviewCard({
     let rafId = 0;
     let debounceTimer: ReturnType<typeof setTimeout> | undefined;
 
-    // Debounced measurement — collapses rapid ResizeObserver callbacks
+    // Debounced measurement: collapses rapid ResizeObserver callbacks
     // into a single rAF-aligned measurement.
     const scheduleMeasure = () => {
       if (cancelled) return;
@@ -93,7 +101,7 @@ export function SelectedPreviewCard({
       if (!cancelled) measure();
     });
 
-    // Re-measure once fonts finish loading — text reflow may cause overflow
+    // Re-measure once fonts finish loading; text reflow may cause overflow.
     document.fonts.ready.then(() => {
       if (!cancelled) {
         rafId = requestAnimationFrame(() => {

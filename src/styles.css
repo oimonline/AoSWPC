@@ -673,6 +673,10 @@ h1 {
   width: calc(194mm * var(--preview-scale));
 }
 
+.batch-print-card[data-batch-card-size="third-a4"] {
+  height: calc(91mm * var(--preview-scale));
+}
+
 .batch-print-card[data-batch-card-size="half-a4"] {
   height: calc(138.5mm * var(--preview-scale));
 }
@@ -842,6 +846,130 @@ h1 {
   background: #111;
   border: 0.2mm solid #111;
   color: #fff;
+}
+
+.warscroll-card--third-a4 {
+  height: 91mm;
+  padding: 2.2mm;
+  width: 194mm;
+}
+
+.warscroll-card--third-a4 .card-header {
+  margin: -2.2mm -2.2mm 1.1mm;
+  min-height: 11.5mm;
+}
+
+.warscroll-card--third-a4 .card-header > div:first-child {
+  padding: 1.4mm 2.1mm;
+}
+
+.warscroll-card--third-a4 .card-header p {
+  font-size: 6.7pt;
+}
+
+.warscroll-card--third-a4 .card-header h2 {
+  font-size: 13.6pt;
+}
+
+.warscroll-card--third-a4 .card-header span {
+  font-size: 6.1pt;
+}
+
+.warscroll-card--third-a4 .points-box {
+  min-width: 24mm;
+}
+
+.warscroll-card--third-a4 .points-box dt {
+  font-size: 5.6pt;
+}
+
+.warscroll-card--third-a4 .points-box dd {
+  font-size: 10.8pt;
+}
+
+.warscroll-card--third-a4 .stat-row {
+  gap: 0.8mm;
+  margin-bottom: 0.9mm;
+}
+
+.warscroll-card--third-a4 .stat {
+  min-height: 7.4mm;
+  padding: 0.55mm;
+}
+
+.warscroll-card--third-a4 .stat dt {
+  font-size: 5.1pt;
+}
+
+.warscroll-card--third-a4 .stat dd {
+  font-size: 9.2pt;
+}
+
+.warscroll-card--third-a4 .card-section {
+  margin-bottom: 0.8mm;
+}
+
+.warscroll-card--third-a4 .section-title {
+  font-size: 5.4pt;
+  margin-bottom: 0.45mm;
+  padding: 0.55mm 0.9mm;
+}
+
+.warscroll-card--third-a4 .weapon-table {
+  font-size: 6.9pt;
+  line-height: 1;
+}
+
+.warscroll-card--third-a4 .weapon-table th {
+  font-size: 5.7pt;
+}
+
+.warscroll-card--third-a4 .weapon-table th,
+.warscroll-card--third-a4 .weapon-table td {
+  padding: 0.22mm 0.38mm;
+}
+
+.warscroll-card--third-a4 .weapon-type {
+  font-size: 4.7pt;
+  margin-right: 0.55mm;
+  padding: 0.25mm 0.45mm;
+}
+
+.warscroll-card--third-a4 .battle-profile dl {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.warscroll-card--third-a4 .battle-profile div {
+  padding: 0.45mm 0.6mm;
+}
+
+.warscroll-card--third-a4 .abilities-list {
+  gap: 0.55mm;
+}
+
+.warscroll-card--third-a4 .ability__chip {
+  font-size: 5.8pt;
+  padding: 0.25mm 0.55mm;
+}
+
+.warscroll-card--third-a4 .ability__body {
+  font-size: 6.15pt;
+  line-height: 1.12;
+  padding: 0.45mm 0.7mm;
+}
+
+.warscroll-card--third-a4 .keyword-list {
+  gap: 0.55mm;
+}
+
+.warscroll-card--third-a4 .keyword-list span {
+  font-size: 4.8pt;
+  padding: 0.45mm 0.7mm;
+}
+
+.warscroll-card--third-a4 .card-footer {
+  font-size: 4.8pt;
+  padding-top: 0.45mm;
 }
 
 .warscroll-card--half-a4 {

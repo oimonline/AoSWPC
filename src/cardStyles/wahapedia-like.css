@@ -31,6 +31,12 @@
   padding: 0;
 }
 
+.wahapedia-card--third-a4 {
+  border-width: 0.28mm;
+  font-size: 7.25pt;
+  line-height: 1.08;
+}
+
 .wahapedia-card * {
   box-sizing: border-box;
 }
@@ -42,6 +48,10 @@
 .wahapedia-card p {
   margin: 0 0 10px;
   padding: 0;
+}
+
+.wahapedia-card--third-a4 p {
+  margin-bottom: 4px;
 }
 
 .wahapedia-card .datasheet {
@@ -59,6 +69,11 @@
   width: 33mm;
 }
 
+.wahapedia-card--third-a4 .wsCharLegend {
+  flex-basis: 25mm;
+  width: 25mm;
+}
+
 .wahapedia-card .wsCharLegend > .Corner22f {
   height: calc(100% - 4px);
 }
@@ -74,6 +89,10 @@
   max-height: 100%;
   padding-left: 1.7mm;
   width: auto;
+}
+
+.wahapedia-card--third-a4 .wsBody {
+  padding-left: 1mm;
 }
 
 .wahapedia-card .wsBodyTop,
@@ -108,6 +127,10 @@
   padding-bottom: 1.1mm;
 }
 
+.wahapedia-card--third-a4 .wsHeaderWrap_c {
+  padding-bottom: 0.45mm;
+}
+
 .wahapedia-card .wsHeader {
   text-align: center;
 }
@@ -120,6 +143,11 @@
   overflow-wrap: anywhere;
   padding-top: 1mm;
   text-transform: uppercase;
+}
+
+.wahapedia-card--third-a4 .wsHeaderIn {
+  font-size: 1.48em;
+  padding-top: 0.45mm;
 }
 
 .wahapedia-card .BreakInsideAvoid {
@@ -227,6 +255,13 @@
   width: 27.9mm;
 }
 
+.wahapedia-card--third-a4 .AoS_profile,
+.wahapedia-card--third-a4 .AoS_profile_Ward {
+  font-size: 8pt;
+  height: 20mm;
+  width: 20mm;
+}
+
 .wahapedia-card .AoS_profile {
   background:
     radial-gradient(circle at 50% 50%, #f5ead1 0 17%, transparent 18%),
@@ -307,10 +342,20 @@
   white-space: pre-wrap;
 }
 
+.wahapedia-card--third-a4 .wsLegend {
+  font-size: 0.78em;
+  padding: 1px;
+}
+
 .wahapedia-card .wsTable {
   display: grid;
   gap: 0.8mm;
   padding: 0 0.7mm 1mm;
+}
+
+.wahapedia-card--third-a4 .wsTable {
+  gap: 0.35mm;
+  padding: 0 0.35mm 0.45mm;
 }
 
 .wahapedia-card .wTable {
@@ -332,14 +377,26 @@
   width: 9.2mm;
 }
 
+.wahapedia-card--third-a4 .wsHeaderCell {
+  width: 7.2mm;
+}
+
 .wahapedia-card .wsHeaderCellName {
   border-width: 0;
   width: 39mm;
 }
 
+.wahapedia-card--third-a4 .wsHeaderCellName {
+  width: 32mm;
+}
+
 .wahapedia-card .wsHeaderCellName_NoRng {
   border-width: 0;
   width: 49mm;
+}
+
+.wahapedia-card--third-a4 .wsHeaderCellName_NoRng {
+  width: 39mm;
 }
 
 .wahapedia-card .wsHeaderCellName_MeleeWeapons,
@@ -349,6 +406,12 @@
   height: 20px;
   position: relative;
   width: 28px;
+}
+
+.wahapedia-card--third-a4 .wsHeaderCellName_MeleeWeapons,
+.wahapedia-card--third-a4 .wsHeaderCellName_RangedWeapons {
+  height: 16px;
+  width: 22px;
 }
 
 .wahapedia-card .wsHeaderCellName_MeleeWeapons::before,
@@ -363,6 +426,12 @@
   justify-content: center;
   line-height: 1;
   width: 15px;
+}
+
+.wahapedia-card--third-a4 .wsHeaderCellName_MeleeWeapons::before,
+.wahapedia-card--third-a4 .wsHeaderCellName_RangedWeapons::before {
+  height: 12px;
+  width: 12px;
 }
 
 .wahapedia-card .wsHeaderCellName_MeleeWeapons::before {
@@ -398,6 +467,11 @@
   padding: 0.35mm;
 }
 
+.wahapedia-card--third-a4 .wsCell {
+  font-size: 1.04em;
+  padding: 0.15mm 0.2mm;
+}
+
 .wahapedia-card .wsBorderN_ {
   border-width: 0 0 1px;
 }
@@ -428,12 +502,20 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.wahapedia-card--third-a4 .Columns2_AoS {
+  column-gap: 0.9mm;
+}
+
 .wahapedia-card .wah-ability-column {
   min-width: 0;
 }
 
 .wahapedia-card .wah-source-rules {
   padding: 0 1.3mm;
+}
+
+.wahapedia-card--third-a4 .wah-source-rules {
+  padding: 0 0.65mm;
 }
 
 .wahapedia-card .redfont {
@@ -451,8 +533,17 @@
   text-transform: uppercase;
 }
 
+.wahapedia-card--third-a4 .wsAbilityHeader {
+  font-size: 1em;
+  padding-bottom: 1px;
+}
+
 .wahapedia-card .wah-source-ability {
   margin-bottom: 1mm;
+}
+
+.wahapedia-card--third-a4 .wah-source-ability {
+  margin-bottom: 0.45mm;
 }
 
 .wahapedia-card .wah-ab-cut {
@@ -481,6 +572,13 @@
   position: relative;
   top: 2px;
   width: 14px;
+}
+
+.wahapedia-card--third-a4 .abLogo {
+  height: 11px;
+  margin-right: 2px;
+  top: 1px;
+  width: 11px;
 }
 
 .wahapedia-card .abLogo::before {
@@ -528,11 +626,21 @@
   padding: 0 0 2px;
 }
 
+.wahapedia-card--third-a4 .abHeader {
+  font-size: 1em;
+  padding-bottom: 1px;
+}
+
 .wahapedia-card .abBody {
   border-style: solid;
   border-width: 0 1px 1px;
   margin: 0 6px;
   padding: 0.55mm 0.55mm 0;
+}
+
+.wahapedia-card--third-a4 .abBody {
+  margin: 0 3px;
+  padding: 0.28mm 0.4mm 0;
 }
 
 .wahapedia-card .abNoReaction {
@@ -546,6 +654,10 @@
 
 .wahapedia-card .spc {
   height: 3px;
+}
+
+.wahapedia-card--third-a4 .spc {
+  height: 1px;
 }
 
 .wahapedia-card .wah-ability-text {
@@ -564,6 +676,11 @@
   overflow: hidden;
 }
 
+.wahapedia-card--third-a4 .abKeywords {
+  margin-top: 0.25mm;
+  min-height: 3.4mm;
+}
+
 .wahapedia-card .abKeywordsBody {
   align-items: center;
   box-sizing: border-box;
@@ -573,6 +690,11 @@
   min-width: 0;
   padding: 2px;
   text-align: center;
+}
+
+.wahapedia-card--third-a4 .abKeywordsBody {
+  flex-basis: 76px;
+  padding: 1px;
 }
 
 .wahapedia-card .abKeywordsBodyText {
@@ -588,6 +710,11 @@
   padding: 2px;
 }
 
+.wahapedia-card--third-a4 .abKeywordsBodyText {
+  gap: 0 2px;
+  padding: 1px;
+}
+
 .wahapedia-card .kwb {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
@@ -596,6 +723,10 @@
   font-weight: bold;
   line-height: 0.95;
   text-transform: uppercase;
+}
+
+.wahapedia-card--third-a4 .kwb {
+  font-size: 0.68em;
 }
 
 .wahapedia-card .kwb::first-letter {
@@ -608,6 +739,10 @@
 
 .wahapedia-card .wsBodyBottom {
   padding: 0 0.7mm 0.3mm;
+}
+
+.wahapedia-card--third-a4 .wsBodyBottom {
+  padding: 0 0.35mm 0.15mm;
 }
 
 .wahapedia-card .wah-keyword-table {
@@ -629,6 +764,12 @@
   width: 25mm;
 }
 
+.wahapedia-card--third-a4 .wsKeywordHeader {
+  border-width: 2px 0 2px 2px;
+  padding: 0 8px;
+  width: 20mm;
+}
+
 .wahapedia-card .wsKeywordHeader div {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -646,6 +787,11 @@
   text-align: center;
 }
 
+.wahapedia-card--third-a4 .wah-keyword-cell-content {
+  gap: 0 2px;
+  min-height: 3mm;
+}
+
 .wahapedia-card .wsKeywordLine1 {
   border-style: solid;
   border-width: 3px 3px 3px 0;
@@ -656,6 +802,11 @@
   vertical-align: middle;
 }
 
+.wahapedia-card--third-a4 .wsKeywordLine1 {
+  border-width: 2px 2px 2px 0;
+  font-size: 0.95em;
+}
+
 .wahapedia-card .wsKeywordLine2 {
   border-style: solid;
   border-width: 0 3px 3px 0;
@@ -664,6 +815,11 @@
   overflow-wrap: anywhere;
   text-align: center;
   vertical-align: middle;
+}
+
+.wahapedia-card--third-a4 .wsKeywordLine2 {
+  border-width: 0 2px 2px 0;
+  font-size: 0.95em;
 }
 
 @media print {

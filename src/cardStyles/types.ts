@@ -17,6 +17,7 @@ export interface CardStyleDefinition {
   id: CardStyleId;
   label: string;
   description: string;
+  supportsThirdA4: boolean;
   supportsHalfA4: boolean;
   supportsFullA4: boolean;
   Card: CardRendererComponent;

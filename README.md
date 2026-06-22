@@ -57,6 +57,16 @@ npm run build:github-pages
 That build sets Vite's base path to `/AoSWPC/` so generated assets resolve
 correctly from the repository Pages URL.
 
+## Print Sizes
+
+The composer supports three fixed A4 portrait card presets plus conservative
+auto-fit:
+
+- `Third A4 (3/page)` prints three full-width cards per A4 page.
+- `Half A4` prints two full-width cards per A4 page.
+- `Full A4` prints one full-page card.
+- `Auto` starts at Half A4 and promotes overflowing cards to Full A4.
+
 ## Data Workflow
 
 Bundled demo data lives in:

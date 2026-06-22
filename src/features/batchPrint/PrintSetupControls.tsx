@@ -46,6 +46,7 @@ export function PrintSetupControls({
             onChange={(event) => setSizeMode(event.target.value as SizeMode)}
           >
             <option value="auto">Auto</option>
+            <option value="third-a4">Third A4 (3/page)</option>
             <option value="half-a4">Half A4</option>
             <option value="full-a4">Full A4</option>
           </select>

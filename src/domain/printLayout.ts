@@ -6,7 +6,7 @@ export interface BatchCard {
 }
 
 export interface BatchPage {
-  type: "half" | "full";
+  type: "third" | "half" | "full";
   cards: BatchCard[];
 }
 
@@ -21,12 +21,14 @@ export function buildBatchPages(
   autoFitResults: Record<string, AutoFitResult>
 ): BatchPage[] {
   const pages: BatchPage[] = [];
-  let halfPage: BatchCard[] = [];
+  let pendingType: BatchPage["type"] | null = null;
+  let pendingCards: BatchCard[] = [];
 
-  function flushHalfPage() {
-    if (halfPage.length > 0) {
-      pages.push({ type: "half", cards: halfPage });
-      halfPage = [];
+  function flushPendingPage() {
+    if (pendingType && pendingCards.length > 0) {
+      pages.push({ type: pendingType, cards: pendingCards });
+      pendingType = null;
+      pendingCards = [];
     }
   }
 
@@ -35,19 +37,26 @@ export function buildBatchPages(
     const card = { warscroll, size };
 
     if (size === "full-a4") {
-      flushHalfPage();
+      flushPendingPage();
       pages.push({ type: "full", cards: [card] });
       continue;
     }
 
-    halfPage.push(card);
+    const nextType = pageTypeForSize(size);
 
-    if (halfPage.length === 2) {
-      flushHalfPage();
+    if (pendingType && pendingType !== nextType) {
+      flushPendingPage();
+    }
+
+    pendingType = nextType;
+    pendingCards.push(card);
+
+    if (pendingCards.length === pageCapacityForSize(size)) {
+      flushPendingPage();
     }
   }
 
-  flushHalfPage();
+  flushPendingPage();
   return pages;
 }
 
@@ -59,4 +68,20 @@ function resolveBatchSize(
   return sizeMode === "auto"
     ? autoFitResults[warscroll.id]?.size ?? "half-a4"
     : sizeMode;
+}
+
+function pageTypeForSize(size: ResolvedSize): BatchPage["type"] {
+  if (size === "third-a4") {
+    return "third";
+  }
+
+  return size === "half-a4" ? "half" : "full";
+}
+
+function pageCapacityForSize(size: ResolvedSize) {
+  if (size === "third-a4") {
+    return 3;
+  }
+
+  return size === "half-a4" ? 2 : 1;
 }
