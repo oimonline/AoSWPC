@@ -40,6 +40,23 @@ The build is frontend-only. It generates the synthetic sample bundle, verifies
 that official/export-derived data artifacts are absent, runs TypeScript, builds
 with Vite, then verifies the built output again.
 
+## GitHub Pages
+
+Pushing to `main` deploys the app through GitHub Actions to:
+
+```text
+https://oimonline.github.io/AoSWPC/
+```
+
+The Pages workflow uses:
+
+```powershell
+npm run build:github-pages
+```
+
+That build sets Vite's base path to `/AoSWPC/` so generated assets resolve
+correctly from the repository Pages URL.
+
 ## Data Workflow
 
 Bundled demo data lives in:

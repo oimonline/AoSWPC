@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run generate:data && npm run verify:data-boundary && tsc --noEmit && vite build && npm run verify:data-boundary",
-    "build:github-pages": "npm run generate:data && npm run verify:data-boundary && tsc --noEmit && vite build --base=/AoSWarscrollPrintComposer/ && npm run verify:data-boundary",
+    "build:github-pages": "npm run generate:data && npm run verify:data-boundary && tsc --noEmit && vite build --base=/AoSWPC/ && npm run verify:data-boundary",
     "generate:data": "node scripts/generate-normalized-data.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
