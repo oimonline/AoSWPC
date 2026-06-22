@@ -150,6 +150,15 @@ try {
     throw new Error("Clean card style was not represented in the DOM.");
   }
 
+  if (sentinelClean.resolvedSize !== "Third A4" || fulcrumClean.resolvedSize !== "Third A4") {
+    throw new Error(
+      `Auto sizing did not use Third A4 for simple clean cards: ${JSON.stringify({
+        sentinelClean,
+        fulcrumClean
+      })}`
+    );
+  }
+
   if (colossusSourceLike.cardStyle !== "wahapedia-like") {
     throw new Error("Source-like card style was not represented in the DOM.");
   }

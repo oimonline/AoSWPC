@@ -65,7 +65,8 @@ auto-fit:
 - `Third A4 (3/page)` prints three full-width cards per A4 page.
 - `Half A4` prints two full-width cards per A4 page.
 - `Full A4` prints one full-page card.
-- `Auto` starts at Half A4 and promotes overflowing cards to Full A4.
+- `Auto` starts at Third A4, then promotes overflowing cards to Half A4 or
+  Full A4.
 
 ## Data Workflow
 

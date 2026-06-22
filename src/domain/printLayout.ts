@@ -66,7 +66,7 @@ function resolveBatchSize(
   autoFitResults: Record<string, AutoFitResult>
 ): ResolvedSize {
   return sizeMode === "auto"
-    ? autoFitResults[warscroll.id]?.size ?? "half-a4"
+    ? autoFitResults[warscroll.id]?.size ?? "third-a4"
     : sizeMode;
 }
 
