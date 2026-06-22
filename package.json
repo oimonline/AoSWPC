@@ -1,0 +1,29 @@
+{
+  "name": "aos-warscroll-print-composer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run generate:data && npm run verify:data-boundary && tsc --noEmit && vite build && npm run verify:data-boundary",
+    "build:github-pages": "npm run generate:data && npm run verify:data-boundary && tsc --noEmit && vite build --base=/AoSWarscrollPrintComposer/ && npm run verify:data-boundary",
+    "generate:data": "node scripts/generate-normalized-data.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "verify:data-boundary": "node scripts/verify-data-boundary.mjs",
+    "verify:layout": "node scripts/verify-layout.mjs"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "puppeteer-core": "^25.1.0",
+    "typescript": "^5.8.0",
+    "vite": "^7.0.0"
+  }
+}

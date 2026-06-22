@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+coverage/
+
+# Generated runtime bundles
+public/generated/*
+!public/generated/
+!public/generated/sample-aos4-warscroll-data.json
+
+# Local user/export data scratch
+data/
+
+# Internal planning material
+prompts/
+specs/
+
+# Local browser/test artifacts
+.chrome*/
+.vite-*.log
+screenshots/
+
+# Local scratch/archive folders
+_to be deleted/
+
+# Environment and machine-local files
+.env
+.env.*
+!.env.example
+*.local
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,19 @@
+warscroll_id|line|name|type|Rng|Atk|Hit|Wnd|Rnd|Dmg|abilities|has_battle_damage|
+sky-sentinels|1|Signal Halberd|melee||2|4+|3+|1|1|Guarded|false|
+sky-sentinels|2|Aether Pistol|ranged|10"|1|4+|4+||1|Paired|false|
+cloudhook-adepts|1|Cloudhook Line|ranged|14"|2|4+|4+||1|Pull|false|
+cloudhook-adepts|2|Hook Knife|melee||2|4+|4+||1||false|
+argent-fulcrum|1|Fulcrum Lance|ranged|18"|3|3+|3+|2|D3|Calibrated|true|
+argent-fulcrum|2|Counterweight Ram|melee||4|4+|2+|2|3|Impact|true|
+emberfen-lancers|1|Fen Lance|melee||3|4+|3+|1|2|Charge|false|
+emberfen-lancers|2|Spark Javelin|ranged|10"|1|4+|4+||1||false|
+cinder-scribes|1|Index Staff|melee||3|4+|4+||1|Measured|false|
+cinder-scribes|2|Margin Spark|ranged|12"|2|4+|4+|1|1||false|
+furnace-colossus|1|Pressure Flue|ranged|12"|D3|4+|3+|1|2|Scalding|true|
+furnace-colossus|2|Anvil Fist|melee||5|4+|2+|2|3|Crushing|true|
+glimmerdeep-wardens|1|Lantern Pike|melee||2|4+|3+|1|1|Shielded|false|
+glimmerdeep-wardens|2|Glimmer Bolt|ranged|12"|1|4+|4+||1||false|
+prismbound-envoys|1|Facet Sabre|melee||3|4+|4+||1|Reflective|false|
+prismbound-envoys|2|Prism Dart|ranged|16"|2|4+|4+|1|1||false|
+lantern-bastion|1|Beacon Array|ranged|20"|4|3+|3+|1|2|Guided|true|
+lantern-bastion|2|Foundation Maul|melee||4|4+|2+|2|3|Anchored|true|

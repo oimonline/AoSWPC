@@ -1,0 +1,1709 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #e6e8ec;
+  color: #15171c;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(180deg, #f7f8f9 0%, #e3e6ea 44%, #d8dce1 100%);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 1px solid #8b2430;
+  border-radius: 6px;
+  background: #9f2938;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 40px;
+  padding: 0 14px;
+}
+
+button:hover:not(:disabled) {
+  background: #7e1d2a;
+}
+
+button:disabled,
+input:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+input,
+select {
+  border: 1px solid #9aa1aa;
+  border-radius: 6px;
+  background: #fff;
+  color: #15171c;
+  min-height: 40px;
+  padding: 0 12px;
+}
+
+label {
+  color: #38404a;
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.app-shell {
+  --left-panel-track: minmax(310px, 390px);
+  min-height: 100vh;
+}
+
+.catalogue-panel {
+  align-items: center;
+  background: #f9fafb;
+  border-bottom: 1px solid #c6ccd3;
+  box-shadow: 0 8px 24px rgb(21 23 28 / 0.08);
+  display: grid;
+  gap: 8px 0;
+  grid-template-columns: var(--left-panel-track) minmax(0, 1fr);
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.toolbar {
+  align-items: end;
+  background: #f9fafb;
+  border-bottom: 1px solid #c6ccd3;
+  box-shadow: 0 8px 24px rgb(21 23 28 / 0.08);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(200px, 280px) minmax(280px, 1fr) auto;
+  padding: 16px clamp(16px, 3vw, 32px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.toolbar__title {
+  min-width: 0;
+  padding: 0 12px;
+}
+
+.toolbar__title p {
+  color: #6a737f;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 2px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-source-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.data-badge {
+  background: #e8ebef;
+  border: 1px solid #b7c0ca;
+  border-radius: 999px;
+  color: #252c35;
+  display: inline-flex;
+  font-size: 0.66rem;
+  font-weight: 900;
+  line-height: 1;
+  padding: 5px 7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.data-badge--user {
+  background: #e6f4ef;
+  border-color: #76ad99;
+  color: #134f3f;
+}
+
+.data-badge--sample,
+.data-badge--loading {
+  background: #fff4d7;
+  border-color: #d2aa46;
+  color: #6e4b03;
+}
+
+.data-action-button {
+  font-size: 0.68rem;
+  min-height: 26px;
+  padding: 0 8px;
+}
+
+.app-kicker {
+  color: #8b2430;
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 1.06rem;
+  line-height: 1.1;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.catalogue-controls {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns:
+    minmax(180px, 1.1fr)
+    minmax(160px, 0.8fr)
+    auto
+    auto
+    auto;
+  min-width: 0;
+  padding-right: 12px;
+}
+
+.field {
+  align-items: center;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.field input,
+.field select {
+  width: 100%;
+}
+
+.url-form {
+  min-width: 0;
+}
+
+.url-row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: 6px;
+}
+
+.url-row input {
+  min-width: 0;
+  width: 100%;
+}
+
+.toolbar__actions {
+  align-items: end;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(128px, auto) minmax(110px, auto);
+  justify-content: end;
+}
+
+.toolbar-field {
+  min-width: 0;
+}
+
+.toolbar-field select {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.catalogue-filter-toggles {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  min-height: 0;
+}
+
+.checkbox-filter {
+  align-items: center;
+  color: #252c35;
+  display: flex;
+  font-size: 0.78rem;
+  font-weight: 800;
+  gap: 7px;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.checkbox-filter input,
+.result-select input {
+  accent-color: #8b2430;
+  flex: 0 0 auto;
+  height: 18px;
+  min-height: 0;
+  padding: 0;
+  width: 18px;
+}
+
+.filter-clear-button {
+  min-height: 40px;
+  white-space: nowrap;
+}
+
+.seed-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  grid-column: 2 / 3;
+}
+
+.seed-row button {
+  background: #2d3540;
+  border-color: #252c35;
+}
+
+.seed-row button:hover:not(:disabled) {
+  background: #111820;
+}
+
+.status {
+  color: #47505b;
+  font-size: 0.88rem;
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.status--error {
+  color: #a11f2f;
+  font-weight: 700;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: var(--left-panel-track) minmax(0, 1fr);
+  min-height: calc(100vh - 120px);
+}
+
+.results-panel {
+  background: #f2f4f7;
+  border-right: 1px solid #c6ccd3;
+  min-width: 0;
+  padding: 12px;
+}
+
+.results-summary {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.results-summary strong {
+  color: #15171c;
+  display: block;
+  font-size: 0.96rem;
+  line-height: 1.2;
+}
+
+.results-summary span {
+  color: #47505b;
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+.button-secondary {
+  background: #fff;
+  border-color: #9aa1aa;
+  color: #252c35;
+  min-height: 36px;
+}
+
+.button-secondary:hover:not(:disabled) {
+  background: #e8ebef;
+}
+
+.results-list {
+  display: grid;
+  gap: 8px;
+  max-height: calc(100vh - 196px);
+  overflow: auto;
+  padding: 1px 2px 20px 1px;
+}
+
+.result-tile {
+  background: #fff;
+  border: 1px solid #c4cad1;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto minmax(0, 1fr);
+  min-height: 86px;
+  padding: 12px;
+}
+
+.result-tile:hover {
+  background: #fff7ea;
+  border-color: #b47b1f;
+}
+
+.result-tile.is-batch-selected {
+  background: #fff1d3;
+  border-color: #8b2430;
+  box-shadow: inset 4px 0 0 #8b2430;
+}
+
+.result-select {
+  align-items: start;
+  display: flex;
+  padding-top: 1px;
+}
+
+.result-button {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #15171c;
+  display: grid;
+  gap: 8px;
+  min-height: 0;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.result-button:hover:not(:disabled) {
+  background: transparent;
+}
+
+.result-title {
+  color: #15171c;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.result-meta {
+  color: #47505b;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  font-weight: 700;
+  gap: 6px 10px;
+  line-height: 1.2;
+}
+
+.result-meta span {
+  min-width: 0;
+}
+
+.variant-pill {
+  align-self: start;
+  background: #2d3540;
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 900;
+  justify-self: start;
+  line-height: 1;
+  padding: 6px 8px;
+  text-transform: uppercase;
+}
+
+.variant-pill--source {
+  background: #265b66;
+}
+
+.print-setup,
+.selected-list {
+  background: #fff;
+  border: 1px solid #c4cad1;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 9px;
+}
+
+.selected-list strong {
+  color: #15171c;
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.print-setup__actions {
+  align-items: center;
+  display: grid;
+  gap: 7px 6px;
+  grid-template-columns: auto repeat(3, minmax(0, 1fr));
+}
+
+.print-setup__actions button {
+  font-size: 0.78rem;
+  min-height: 30px;
+  padding-inline: 8px;
+  width: 100%;
+}
+
+.batch-field {
+  align-items: center;
+  display: contents;
+  gap: 6px;
+  min-width: 0;
+}
+
+.batch-field--style label {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.batch-field--style select {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+.batch-field--size label {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.batch-field--size select {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.batch-field label {
+  font-size: 0.66rem;
+  padding-right: 2px;
+}
+
+.batch-field select {
+  min-width: 0;
+  min-height: 30px;
+  padding: 0 8px;
+  width: 100%;
+}
+
+.batch-list {
+  display: grid;
+  gap: 4px;
+  list-style: none;
+  margin: 8px 0 0;
+  max-height: 112px;
+  overflow: auto;
+  padding: 0;
+}
+
+.batch-list li {
+  align-items: center;
+  background: #f6f8fa;
+  border-radius: 6px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 5px 6px;
+}
+
+.batch-list span {
+  color: #252c35;
+  font-size: 0.76rem;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.batch-remove {
+  background: #fff;
+  border-color: #9aa1aa;
+  color: #252c35;
+  font-size: 0.7rem;
+  min-height: 24px;
+  padding-inline: 7px;
+}
+
+.batch-remove:hover:not(:disabled) {
+  background: #e8ebef;
+}
+
+.empty-state,
+.loading-list {
+  background: #fff;
+  border: 1px dashed #a2aab4;
+  border-radius: 8px;
+  color: #47505b;
+  padding: 18px;
+}
+
+.empty-state h2 {
+  color: #15171c;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+
+.empty-state p {
+  line-height: 1.4;
+  margin: 0 0 14px;
+}
+
+.empty-state--error {
+  border-color: #c86572;
+}
+
+.loading-list {
+  display: grid;
+  gap: 10px;
+}
+
+.loading-list span {
+  background: linear-gradient(90deg, #e1e5ea, #f7f8f9, #e1e5ea);
+  border-radius: 6px;
+  display: block;
+  height: 68px;
+}
+
+.print-stage {
+  --preview-user-zoom: 0.5;
+  --preview-scale: var(--preview-user-zoom);
+  container-type: inline-size;
+  padding: 10px clamp(18px, 3vw, 32px) clamp(18px, 4vw, 42px) 10px;
+  min-width: 0;
+}
+
+.preview-topline {
+  align-items: center;
+  color: #3d4651;
+  display: flex;
+  font-size: 0.78rem;
+  font-weight: 800;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+  min-height: 26px;
+}
+
+.preview-label {
+  color: #8b2430;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.preview-zoom-controls {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #c4cad1;
+  border-radius: 6px;
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+}
+
+.preview-zoom-controls button {
+  border-radius: 4px;
+  font-size: 0.68rem;
+  min-height: 22px;
+  min-width: 22px;
+  padding: 0 6px;
+}
+
+.preview-zoom-controls output {
+  color: #252c35;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  min-width: 34px;
+  text-align: center;
+}
+
+.preview-scroll {
+  align-items: flex-start;
+  display: block;
+  overflow: auto;
+  padding: 4px 0 32px;
+}
+
+.selected-preview-pages {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(calc(194mm * var(--preview-scale)), 1fr));
+  justify-content: center;
+  justify-items: center;
+}
+
+.batch-print-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: calc(4mm * var(--preview-scale));
+  justify-content: flex-start;
+  min-height: calc(281mm * var(--preview-scale));
+  width: calc(194mm * var(--preview-scale));
+}
+
+.batch-print-card {
+  break-inside: avoid;
+  width: calc(194mm * var(--preview-scale));
+}
+
+.batch-print-card[data-batch-card-size="half-a4"] {
+  height: calc(138.5mm * var(--preview-scale));
+}
+
+.batch-print-card[data-batch-card-size="full-a4"] {
+  height: calc(281mm * var(--preview-scale));
+}
+
+.batch-print-card > .warscroll-card {
+  transform: scale(var(--preview-scale));
+  transform-origin: top left;
+}
+
+@container (max-width: 760px) {
+  .selected-preview-pages {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.empty-preview {
+  align-items: center;
+  background: #fff;
+  border: 1px dashed #939ba6;
+  color: #47505b;
+  display: flex;
+  justify-content: center;
+  min-height: calc(138.5mm * var(--preview-scale));
+  width: calc(194mm * var(--preview-scale));
+}
+
+.warscroll-card {
+  --accent: #9f2938;
+  --accent-dark: #531923;
+  --ink: #15171c;
+  --line: #2e333a;
+  background: #fffdf8;
+  border: 0.7mm solid var(--line);
+  box-shadow: 0 18px 42px rgb(14 18 24 / 0.22);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  font-family:
+    "Segoe UI", Roboto, Arial, ui-sans-serif, system-ui, sans-serif;
+  overflow: hidden;
+  padding: 4.2mm;
+}
+
+[data-card-style="clean"] {
+  --accent: #344b2f;
+  --accent-dark: #344b2f;
+}
+
+[data-card-style="clean-bw"] {
+  --accent: #111;
+  --accent-dark: #111;
+  --ink: #000;
+  --line: #000;
+  background: #fff;
+  border-color: #000;
+}
+
+[data-card-style="clean-bw"] .card-header {
+  background: #111;
+  border-bottom: 0.35mm solid #000;
+}
+
+[data-card-style="clean-bw"] .card-header p,
+[data-card-style="clean-bw"] .points-box dt {
+  color: #fff;
+}
+
+[data-card-style="clean-bw"] .card-header span {
+  color: #e6e6e6;
+}
+
+[data-card-style="clean-bw"] .points-box {
+  border-left-color: #fff;
+}
+
+[data-card-style="clean-bw"] .stat {
+  background: #fff;
+  border-color: #000;
+}
+
+[data-card-style="clean-bw"] .stat dt {
+  color: #111;
+}
+
+[data-card-style="clean-bw"] .section-title {
+  align-items: center;
+  background: #111;
+  border: 0.25mm solid #000;
+  color: #fff;
+  display: flex;
+  gap: 1mm;
+}
+
+[data-card-style="clean-bw"] .section-title::before {
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #fff 0,
+      #fff 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  border: 0.2mm solid #fff;
+  content: "";
+  display: inline-block;
+  flex: 0 0 auto;
+  height: 2.6mm;
+  width: 2.6mm;
+}
+
+[data-card-style="clean-bw"] .weapon-table th {
+  background: #111;
+  border: 0.25mm solid #000;
+  color: #fff;
+}
+
+[data-card-style="clean-bw"] .weapon-table td {
+  border-color: #000;
+}
+
+[data-card-style="clean-bw"] .weapon-table em {
+  color: #000;
+  font-weight: 900;
+}
+
+[data-card-style="clean-bw"] .weapon-type {
+  background: #111;
+  border: 0.2mm solid #111;
+  color: #fff;
+}
+
+[data-card-style="clean-bw"] .weapon-type--ranged {
+  background: #fff;
+  color: #111;
+}
+
+[data-card-style="clean-bw"] .weapon-type--melee {
+  background: #111;
+  color: #fff;
+}
+
+[data-card-style="clean-bw"] .ability {
+  border-color: #000;
+}
+
+[data-card-style="clean-bw"] .ability__body {
+  background: #fff;
+  color: #000;
+}
+
+[data-card-style="clean-bw"] .ability__chip {
+  background: #fff;
+  border-color: #000;
+  color: #000;
+}
+
+[data-card-style="clean-bw"] .ability__chip--phase {
+  background: #111;
+  color: #fff;
+}
+
+[data-card-style="clean-bw"] .keyword-list span {
+  background: #111;
+  border: 0.2mm solid #111;
+  color: #fff;
+}
+
+.warscroll-card--half-a4 {
+  height: 138.5mm;
+  width: 194mm;
+}
+
+.warscroll-card--half-a4 {
+  padding: 3mm;
+}
+
+.warscroll-card--half-a4 .card-header {
+  margin: -3mm -3mm 2mm;
+  min-height: 15mm;
+}
+
+.warscroll-card--half-a4 .card-header > div:first-child {
+  padding: 2.2mm 3mm;
+}
+
+.warscroll-card--half-a4 .card-header h2 {
+  font-size: 18pt;
+}
+
+.warscroll-card--half-a4 .points-box dd {
+  font-size: 14pt;
+}
+
+.warscroll-card--half-a4 .stat-row {
+  gap: 1.2mm;
+  margin-bottom: 1.4mm;
+}
+
+.warscroll-card--half-a4 .stat {
+  min-height: 10mm;
+  padding: 1mm;
+}
+
+.warscroll-card--half-a4 .stat dd {
+  font-size: 12pt;
+}
+
+.warscroll-card--half-a4 .card-section {
+  margin-bottom: 1.4mm;
+}
+
+.warscroll-card--half-a4 .section-title {
+  margin-bottom: 0.8mm;
+  padding: 1mm 1.4mm;
+}
+
+[data-card-style="clean"].warscroll-card--half-a4 .weapon-table {
+  font-size: 9.2pt;
+  line-height: 1.02;
+}
+
+[data-card-style="clean"].warscroll-card--half-a4 .weapon-table th {
+  font-size: 8.1pt;
+}
+
+[data-card-style="clean-bw"].warscroll-card--half-a4 .weapon-table {
+  font-size: 9.2pt;
+  line-height: 1.02;
+}
+
+[data-card-style="clean-bw"].warscroll-card--half-a4 .weapon-table th {
+  font-size: 8.1pt;
+}
+
+.warscroll-card--half-a4 .weapon-table th,
+.warscroll-card--half-a4 .weapon-table td {
+  padding: 0.35mm 0.55mm;
+}
+
+.warscroll-card--half-a4 .battle-profile dl {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.warscroll-card--half-a4 .battle-profile div {
+  padding: 0.8mm 1mm;
+}
+
+.warscroll-card--half-a4 .abilities-list {
+  gap: 0.9mm;
+}
+
+[data-card-style="clean"].warscroll-card--half-a4 .ability__chip {
+  font-size: 8.2pt;
+  padding: 0.45mm 0.8mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--half-a4 .ability__chip {
+  font-size: 8.2pt;
+  padding: 0.45mm 0.8mm;
+}
+
+[data-card-style="clean"].warscroll-card--half-a4 .ability__body {
+  font-size: 8.2pt;
+  line-height: 1.18;
+  padding: 0.8mm 1.1mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--half-a4 .ability__body {
+  font-size: 8.2pt;
+  line-height: 1.18;
+  padding: 0.8mm 1.1mm;
+}
+
+.warscroll-card--half-a4 .keyword-list span {
+  font-size: 5.9pt;
+  padding: 0.75mm 1mm;
+}
+
+.warscroll-card--half-a4 .card-footer {
+  font-size: 5.5pt;
+  padding-top: 0.7mm;
+}
+
+.warscroll-card--full-a4 {
+  height: 281mm;
+  width: 194mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 {
+  padding: 3mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 {
+  padding: 3mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .card-header {
+  margin: -3mm -3mm 2mm;
+  min-height: 15mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .card-header {
+  margin: -3mm -3mm 2mm;
+  min-height: 15mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .card-header > div:first-child {
+  padding: 2.2mm 3mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .card-header > div:first-child {
+  padding: 2.2mm 3mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .card-header h2 {
+  font-size: 18pt;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .card-header h2 {
+  font-size: 18pt;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .points-box dd {
+  font-size: 14pt;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .points-box dd {
+  font-size: 14pt;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .stat-row {
+  gap: 1.2mm;
+  margin-bottom: 1.4mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .stat-row {
+  gap: 1.2mm;
+  margin-bottom: 1.4mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .stat {
+  min-height: 10mm;
+  padding: 1mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .stat {
+  min-height: 10mm;
+  padding: 1mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .stat dd {
+  font-size: 12pt;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .stat dd {
+  font-size: 12pt;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .card-section {
+  margin-bottom: 1.4mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .card-section {
+  margin-bottom: 1.4mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .section-title {
+  margin-bottom: 0.8mm;
+  padding: 1mm 1.4mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .section-title {
+  margin-bottom: 0.8mm;
+  padding: 1mm 1.4mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .weapon-table {
+  font-size: 9.2pt;
+  line-height: 1.02;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .weapon-table th {
+  font-size: 8.1pt;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .weapon-table {
+  font-size: 9.2pt;
+  line-height: 1.02;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .weapon-table th {
+  font-size: 8.1pt;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .weapon-table th,
+[data-card-style="clean"].warscroll-card--full-a4 .weapon-table td {
+  padding: 0.35mm 0.55mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .weapon-table th,
+[data-card-style="clean-bw"].warscroll-card--full-a4 .weapon-table td {
+  padding: 0.35mm 0.55mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .battle-profile dl {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .battle-profile dl {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .battle-profile div {
+  padding: 0.8mm 1mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .battle-profile div {
+  padding: 0.8mm 1mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .abilities-list {
+  gap: 0.9mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .abilities-list {
+  gap: 0.9mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .ability__chip {
+  font-size: 8.2pt;
+  padding: 0.45mm 0.8mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .ability__chip {
+  font-size: 8.2pt;
+  padding: 0.45mm 0.8mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .ability__body {
+  font-size: 8.2pt;
+  line-height: 1.18;
+  padding: 0.8mm 1.1mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .ability__body {
+  font-size: 8.2pt;
+  line-height: 1.18;
+  padding: 0.8mm 1.1mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .keyword-list span {
+  font-size: 5.9pt;
+  padding: 0.75mm 1mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .keyword-list span {
+  font-size: 5.9pt;
+  padding: 0.75mm 1mm;
+}
+
+[data-card-style="clean"].warscroll-card--full-a4 .card-footer {
+  font-size: 5.5pt;
+  padding-top: 0.7mm;
+}
+
+[data-card-style="clean-bw"].warscroll-card--full-a4 .card-footer {
+  font-size: 5.5pt;
+  padding-top: 0.7mm;
+}
+
+.card-header {
+  align-items: stretch;
+  background: var(--accent-dark);
+  color: #fff;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: -4.2mm -4.2mm 3mm;
+  min-height: 20mm;
+}
+
+.card-header > div:first-child {
+  min-width: 0;
+  padding: 3mm 4mm;
+}
+
+.card-header p,
+.card-header h2 {
+  margin: 0;
+}
+
+.card-header p {
+  color: #f1c55b;
+  font-size: 8.5pt;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.card-header h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22pt;
+  line-height: 1.02;
+  overflow-wrap: anywhere;
+}
+
+.card-header span {
+  color: #f5e1c0;
+  display: block;
+  font-size: 7.5pt;
+  line-height: 1.18;
+  margin-top: 1.5mm;
+}
+
+.points-box {
+  border-left: 0.5mm solid rgb(255 255 255 / 0.32);
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0;
+  min-width: 33mm;
+}
+
+.points-box div {
+  align-content: center;
+  display: grid;
+  justify-items: center;
+  padding: 2mm 2.4mm;
+}
+
+.points-box dt,
+.points-box dd {
+  margin: 0;
+}
+
+.points-box dt {
+  color: #f1c55b;
+  font-size: 7pt;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.points-box dd {
+  font-size: 18pt;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.stat-row {
+  display: grid;
+  gap: 1.8mm;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-bottom: 2.5mm;
+}
+
+.stat {
+  background: #f0f2f4;
+  border: 0.35mm solid var(--line);
+  border-radius: 1.6mm;
+  display: grid;
+  gap: 0.6mm;
+  justify-items: center;
+  min-height: 13mm;
+  padding: 1.4mm;
+}
+
+.stat dt,
+.stat dd {
+  margin: 0;
+}
+
+.stat dt {
+  color: #4b535e;
+  font-size: 6.5pt;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.stat dd {
+  font-size: 15pt;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.card-section {
+  margin-bottom: 2.5mm;
+}
+
+.section-title {
+  background: var(--accent);
+  color: #fff;
+  font-size: 8pt;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0 0 1.2mm;
+  padding: 1.3mm 2mm;
+  text-transform: uppercase;
+}
+
+.weapon-table {
+  border-collapse: collapse;
+  font-size: 8.2pt;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.weapon-table th {
+  background: #2d3540;
+  color: #fff;
+  font-size: 7.1pt;
+  font-weight: 900;
+  padding: 1.1mm 1mm;
+  text-transform: uppercase;
+}
+
+.weapon-table th:first-child {
+  width: 35%;
+}
+
+.weapon-table th:last-child {
+  width: 25%;
+}
+
+.weapon-table td {
+  border: 0.25mm solid #737b85;
+  line-height: 1.22;
+  padding: 1.05mm 1mm;
+  vertical-align: top;
+}
+
+.weapon-table td:not(:first-child):not(:last-child) {
+  text-align: center;
+}
+
+.weapon-table__stat {
+  font-weight: 900;
+}
+
+.weapon-table em {
+  background: #8b2430;
+  border-radius: 999px;
+  color: #fff;
+  display: inline-block;
+  font-size: 6.6pt;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+  margin-right: 1mm;
+  padding: 0.3mm 0.7mm;
+  vertical-align: 0.1mm;
+}
+
+[data-card-style="clean-bw"] .weapon-table em {
+  background: #fff;
+  border: 0.2mm solid #000;
+  color: #000;
+}
+
+.weapon-type {
+  background: #424b56;
+  border-radius: 999px;
+  color: #fff;
+  display: inline-block;
+  font-size: 6.2pt;
+  font-weight: 900;
+  line-height: 1;
+  margin-right: 1mm;
+  padding: 0.7mm 1mm;
+  text-transform: uppercase;
+}
+
+.weapon-type--ranged {
+  background: #265b66;
+}
+
+.weapon-type--melee {
+  background: #75303a;
+}
+
+.battle-profile dl {
+  border: 0.25mm solid #737b85;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+}
+
+.battle-profile div {
+  border-bottom: 0.25mm solid #737b85;
+  border-right: 0.25mm solid #737b85;
+  min-width: 0;
+  padding: 1.2mm 1.4mm;
+}
+
+.battle-profile div:nth-child(3n) {
+  border-right: 0;
+}
+
+.battle-profile dt,
+.battle-profile dd {
+  margin: 0;
+}
+
+.battle-profile dt {
+  color: #4b535e;
+  font-size: 6.2pt;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.battle-profile dd {
+  font-size: 7.1pt;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.abilities-list {
+  display: grid;
+  gap: 1.6mm;
+}
+
+.ability {
+  border: 0.25mm solid #737b85;
+  break-inside: avoid;
+}
+
+[data-card-style="clean"] .ability {
+  border-color: var(--ability-phase-color, #737b85);
+}
+
+.ability__body {
+  font-size: 8pt;
+  line-height: 1.24;
+  margin: 0;
+  padding: 1.1mm 1.3mm;
+  white-space: pre-wrap;
+}
+
+.ability__chip-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.45mm;
+  margin-right: 0.9mm;
+  vertical-align: 0.15mm;
+  white-space: normal;
+}
+
+.ability__chip {
+  background: #fff;
+  border: 0.2mm solid #a8aeb6;
+  border-radius: 999px;
+  color: #2f3741;
+  font-size: 6.4pt;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.65mm 1mm;
+}
+
+[data-card-style="clean"] .ability__chip--phase {
+  background: var(--ability-phase-color, #2d3540);
+  border-color: var(--ability-phase-color, #2d3540);
+  color: #fff;
+}
+
+[data-card-style="clean"] .ability__chip--meta {
+  border-color: var(--ability-phase-color, #a8aeb6);
+  color: #1e252d;
+}
+
+.ability__name {
+  color: #101418;
+  font-weight: 900;
+}
+
+.ability__legend {
+  background: #fff6db;
+  border-top: 0.2mm solid #d7bf7a;
+  color: #4f4431;
+  font-style: italic;
+}
+
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1mm;
+}
+
+.keyword-list span {
+  background: #242b34;
+  border-radius: 1.2mm;
+  color: #fff;
+  font-size: 6.4pt;
+  font-weight: 900;
+  line-height: 1;
+  padding: 1mm 1.2mm;
+}
+
+.card-footer {
+  border-top: 0.25mm solid #9aa1aa;
+  color: #555f6c;
+  display: flex;
+  font-size: 6pt;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1mm;
+}
+
+.warscroll-card.is-compact {
+  padding: 3.2mm;
+}
+
+.warscroll-card.is-compact .card-header {
+  margin: -3.2mm -3.2mm 2mm;
+  min-height: 17mm;
+}
+
+.warscroll-card.is-compact .card-header h2 {
+  font-size: 18pt;
+}
+
+.warscroll-card.is-compact .stat-row,
+.warscroll-card.is-compact .card-section {
+  margin-bottom: 1.5mm;
+}
+
+.warscroll-card.is-compact .abilities-list {
+  gap: 1mm;
+}
+
+.warscroll-card.is-compact .ability__body {
+  font-size: 7.1pt;
+  line-height: 1.2;
+  padding: 1mm 1.2mm;
+}
+
+.warscroll-card.is-compact .weapon-table td {
+  padding: 0.75mm 0.8mm;
+}
+
+@media (max-width: 960px) {
+  .catalogue-panel {
+    grid-template-columns: 1fr;
+    position: static;
+  }
+
+  .catalogue-controls {
+    grid-template-columns: minmax(0, 1fr) minmax(170px, 0.7fr) auto;
+  }
+
+  .catalogue-filter-toggles {
+    grid-column: 1 / -1;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .results-panel {
+    border-right: 0;
+    border-bottom: 1px solid #c6ccd3;
+  }
+
+  .results-list {
+    max-height: 360px;
+  }
+
+  .toolbar {
+    grid-template-columns: 1fr;
+    position: static;
+  }
+
+  .seed-row,
+  .status {
+    grid-column: auto;
+  }
+
+  .print-setup__actions {
+    grid-template-columns: auto repeat(3, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+
+  .print-setup__actions button {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .catalogue-controls {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    white-space: normal;
+  }
+
+  .catalogue-filter-toggles {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .field {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .result-tile {
+    min-height: 96px;
+  }
+
+  .url-row {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar__actions,
+  .print-setup__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .batch-field {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 1fr;
+  }
+
+  .batch-field--style {
+    grid-column: auto;
+  }
+
+  .batch-field--style label,
+  .batch-field--style select,
+  .batch-field--size label,
+  .batch-field--size select {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .seed-row button {
+    flex: 1 1 140px;
+  }
+
+  .print-stage {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .preview-scroll {
+    justify-content: flex-start;
+  }
+}
+
+@page {
+  margin: 8mm;
+  size: A4 portrait;
+}
+
+@media print {
+  :root,
+  body {
+    background: #fff;
+  }
+
+  .catalogue-panel,
+  .results-panel,
+  .toolbar,
+  .preview-zoom-controls,
+  .preview-topline,
+  .empty-preview {
+    display: none !important;
+  }
+
+  .app-shell {
+    min-height: 0;
+  }
+
+  .workspace {
+    display: block;
+    min-height: 0;
+  }
+
+  .print-stage {
+    --preview-scale: 1;
+    --preview-user-zoom: 1;
+    padding: 0;
+  }
+
+  .preview-scroll {
+    display: block;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .selected-preview-pages {
+    display: block;
+  }
+
+  .batch-print-page {
+    break-after: page;
+    break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    gap: 4mm;
+    min-height: 281mm;
+    width: 194mm;
+  }
+
+  .batch-print-page:last-child {
+    break-after: auto;
+  }
+
+  .batch-print-page--full {
+    gap: 0;
+  }
+
+  .batch-print-card {
+    break-inside: avoid;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .batch-print-card > .warscroll-card {
+    transform: none;
+  }
+
+  .warscroll-card {
+    box-shadow: none;
+    break-inside: avoid;
+    margin: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

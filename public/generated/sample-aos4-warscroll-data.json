@@ -1,0 +1,1108 @@
+{
+  "schemaVersion": 1,
+  "game": "aos4",
+  "generatedAt": "2026-06-20T00:00:00.000Z",
+  "source": {
+    "type": "synthetic-sample-csv-export",
+    "version": "Synthetic sample dataset 2026-06-20"
+  },
+  "catalogue": [
+    {
+      "id": "cinder-scribes",
+      "name": "Cinder Scribes",
+      "factionId": "EMBER",
+      "factionName": "Emberfen Collegium",
+      "role": "Hero",
+      "points": 120,
+      "unitSize": "1",
+      "sourceUrl": "sample://aos4/emberfen-collegium/cinder-scribes",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "cinder scribes emberfen collegium hero 1 synthetic field almanac archivists who carry glowing ledgers and insist the battle has footnotes one emberfen unit demo hero profile hero emberfen wizard 1"
+    },
+    {
+      "id": "emberfen-lancers",
+      "name": "Emberfen Lancers",
+      "factionId": "EMBER",
+      "factionName": "Emberfen Collegium",
+      "role": "Cavalry",
+      "points": 150,
+      "unitSize": "3",
+      "sourceUrl": "sample://aos4/emberfen-collegium/emberfen-lancers",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "emberfen lancers emberfen collegium cavalry 3 synthetic field almanac fast riders who mark safe paths through hot marshlight any emberfen unit demo cavalry profile cavalry emberfen demo"
+    },
+    {
+      "id": "furnace-colossus",
+      "name": "Furnace Colossus",
+      "factionId": "EMBER",
+      "factionName": "Emberfen Collegium",
+      "role": "Monster",
+      "points": 350,
+      "unitSize": "1",
+      "sourceUrl": "sample://aos4/emberfen-collegium/furnace-colossus",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "furnace colossus emberfen collegium monster 1 synthetic field almanac a brass bound giant made for stress testing large card composition any emberfen unit large sample profile with several abilities monster emberfen demo"
+    },
+    {
+      "id": "glimmerdeep-wardens",
+      "name": "Glimmerdeep Wardens",
+      "factionId": "GLIM",
+      "factionName": "Glimmerdeep League",
+      "role": "Infantry",
+      "points": 100,
+      "unitSize": "10",
+      "sourceUrl": "sample://aos4/glimmerdeep-league/glimmerdeep-wardens",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "glimmerdeep wardens glimmerdeep league infantry 10 synthetic field almanac steady protectors carrying lanterns ledgers and unreasonable confidence any glimmerdeep unit demo infantry profile infantry glimmerdeep demo"
+    },
+    {
+      "id": "lantern-bastion",
+      "name": "Lantern Bastion",
+      "factionId": "GLIM",
+      "factionName": "Glimmerdeep League",
+      "role": "War Machine",
+      "points": 280,
+      "unitSize": "1",
+      "sourceUrl": "sample://aos4/glimmerdeep-league/lantern-bastion",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "lantern bastion glimmerdeep league war machine 1 synthetic field almanac a slow tower of glass and gears that turns dark corners into maps one glimmerdeep unit large sample support profile war machine glimmerdeep demo"
+    },
+    {
+      "id": "prismbound-envoys",
+      "name": "Prismbound Envoys",
+      "factionId": "GLIM",
+      "factionName": "Glimmerdeep League",
+      "role": "Cavalry",
+      "points": null,
+      "unitSize": null,
+      "sourceUrl": "sample://aos4/glimmerdeep-league/prismbound-envoys",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "prismbound envoys glimmerdeep league cavalry synthetic field almanac diplomats who arrive before the invitation and leave after the mirror stops ringing any glimmerdeep unit intentionally missing points and unit size for filter checks cavalry glimmerdeep demo"
+    },
+    {
+      "id": "argent-fulcrum",
+      "name": "Argent Fulcrum",
+      "factionId": "SKY",
+      "factionName": "Skyforge Accord",
+      "role": "War Machine",
+      "points": 320,
+      "unitSize": "1",
+      "sourceUrl": "sample://aos4/skyforge-accord/argent-fulcrum",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "argent fulcrum skyforge accord war machine 1 synthetic field almanac a walking balance engine that anchors the line with calibrated thunder one skyforge unit large sample profile for full page layout checks war machine skyforge demo"
+    },
+    {
+      "id": "cloudhook-adepts",
+      "name": "Cloudhook Adepts",
+      "factionId": "SKY",
+      "factionName": "Skyforge Accord",
+      "role": "Infantry",
+      "points": 130,
+      "unitSize": "6",
+      "sourceUrl": "sample://aos4/skyforge-accord/cloudhook-adepts",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "cloudhook adepts skyforge accord infantry 6 synthetic field almanac rope teams who read the wind by the pull of their hooks any skyforge unit demo skirmish profile infantry skyforge scout"
+    },
+    {
+      "id": "sky-sentinels",
+      "name": "Skyforge Sentinels",
+      "factionId": "SKY",
+      "factionName": "Skyforge Accord",
+      "role": "Infantry",
+      "points": 110,
+      "unitSize": "5",
+      "sourceUrl": "sample://aos4/skyforge-accord/skyforge-sentinels",
+      "sourceName": "Synthetic Field Almanac",
+      "sourceVersion": "Synthetic sample dataset 2026-06-20",
+      "isVirtual": false,
+      "variantLabel": null,
+      "searchText": "skyforge sentinels skyforge accord infantry 5 synthetic field almanac patient line holders with bright shields and louder horns any skyforge unit demo battleline profile infantry skyforge demo"
+    }
+  ],
+  "warscrollsById": {
+    "sky-sentinels": {
+      "id": "sky-sentinels",
+      "sourceUrl": "sample://aos4/skyforge-accord/skyforge-sentinels",
+      "game": "aos4",
+      "faction": "Skyforge Accord",
+      "name": "Skyforge Sentinels",
+      "subtitle": null,
+      "flavorText": "Patient line holders with bright shields and louder horns.",
+      "points": 110,
+      "baseSize": "32mm round",
+      "unitSize": "5",
+      "canReinforce": true,
+      "stats": {
+        "move": "6\"",
+        "save": "4+",
+        "control": "1",
+        "health": "2",
+        "ward": null
+      },
+      "weapons": [
+        {
+          "name": "Signal Halberd",
+          "type": "melee",
+          "range": null,
+          "attacks": "2",
+          "hit": "4+",
+          "wound": "3+",
+          "rend": "1",
+          "damage": "1",
+          "abilities": [
+            "Guarded"
+          ],
+          "hasBattleDamage": false
+        },
+        {
+          "name": "Aether Pistol",
+          "type": "ranged",
+          "range": "10\"",
+          "attacks": "1",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": null,
+          "damage": "1",
+          "abilities": [
+            "Paired"
+          ],
+          "hasBattleDamage": false
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Hold The Bright Line",
+          "type": "Control",
+          "kind": "control",
+          "phase": "End of Turn",
+          "timing": "Once per turn",
+          "text": "Declare: pick this unit if it is contesting a demo objective. Effect: add 1 to its control score until the end of the turn.",
+          "legend": "The lamps are set in a perfect row.",
+          "tags": [
+            "Control"
+          ]
+        },
+        {
+          "name": "Shield Chime",
+          "type": "Defensive",
+          "kind": "reaction",
+          "phase": "Defensive Reaction",
+          "timing": "Once per phase",
+          "text": "Declare: pick this unit when it is targeted by an attack. Effect: subtract 1 from the damage characteristic of one incoming weapon, to a minimum of 1.",
+          "legend": "A single note tells every shield where to be.",
+          "tags": [
+            "Ward"
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Skyforge",
+        "Demo"
+      ],
+      "battleProfile": {
+        "role": "Infantry",
+        "regimentOptions": "Any Skyforge unit",
+        "notes": "Demo battleline profile."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Skyforge Sentinels",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "full-a4",
+        "contentScore": 9.8,
+        "hasOverflowRisk": false
+      }
+    },
+    "cloudhook-adepts": {
+      "id": "cloudhook-adepts",
+      "sourceUrl": "sample://aos4/skyforge-accord/cloudhook-adepts",
+      "game": "aos4",
+      "faction": "Skyforge Accord",
+      "name": "Cloudhook Adepts",
+      "subtitle": null,
+      "flavorText": "Rope teams who read the wind by the pull of their hooks.",
+      "points": 130,
+      "baseSize": "28.5mm round",
+      "unitSize": "6",
+      "canReinforce": true,
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": null
+      },
+      "weapons": [
+        {
+          "name": "Cloudhook Line",
+          "type": "ranged",
+          "range": "14\"",
+          "attacks": "2",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": null,
+          "damage": "1",
+          "abilities": [
+            "Pull"
+          ],
+          "hasBattleDamage": false
+        },
+        {
+          "name": "Hook Knife",
+          "type": "melee",
+          "range": null,
+          "attacks": "2",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": null,
+          "damage": "1",
+          "abilities": [],
+          "hasBattleDamage": false
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Hook The Horizon",
+          "type": "Movement",
+          "kind": "movement",
+          "phase": "Movement Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick an enemy demo unit within 12 inches. Effect: that unit cannot finish a retreat move within 3 inches of this unit this phase.",
+          "legend": "The line goes tight before anyone sees why.",
+          "tags": [
+            "Move"
+          ]
+        },
+        {
+          "name": "Windstep",
+          "type": "Special",
+          "kind": "passive",
+          "phase": "Passive",
+          "timing": "Passive",
+          "text": "Effect: this unit can move across terrain features as if they were not there during a normal move.",
+          "legend": "Every knot has a shortcut.",
+          "tags": [
+            "Move"
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Skyforge",
+        "Scout"
+      ],
+      "battleProfile": {
+        "role": "Infantry",
+        "regimentOptions": "Any Skyforge unit",
+        "notes": "Demo skirmish profile."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Cloudhook Adepts",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "full-a4",
+        "contentScore": 9.8,
+        "hasOverflowRisk": false
+      }
+    },
+    "argent-fulcrum": {
+      "id": "argent-fulcrum",
+      "sourceUrl": "sample://aos4/skyforge-accord/argent-fulcrum",
+      "game": "aos4",
+      "faction": "Skyforge Accord",
+      "name": "Argent Fulcrum",
+      "subtitle": null,
+      "flavorText": "A walking balance-engine that anchors the line with calibrated thunder.",
+      "points": 320,
+      "baseSize": "120mm oval",
+      "unitSize": "1",
+      "canReinforce": false,
+      "stats": {
+        "move": "5\"",
+        "save": "3+",
+        "control": "5",
+        "health": "14",
+        "ward": "6+"
+      },
+      "weapons": [
+        {
+          "name": "Fulcrum Lance",
+          "type": "ranged",
+          "range": "18\"",
+          "attacks": "3",
+          "hit": "3+",
+          "wound": "3+",
+          "rend": "2",
+          "damage": "D3",
+          "abilities": [
+            "Calibrated"
+          ],
+          "hasBattleDamage": true
+        },
+        {
+          "name": "Counterweight Ram",
+          "type": "melee",
+          "range": null,
+          "attacks": "4",
+          "hit": "4+",
+          "wound": "2+",
+          "rend": "2",
+          "damage": "3",
+          "abilities": [
+            "Impact"
+          ],
+          "hasBattleDamage": true
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Set The Measure",
+          "type": "Control",
+          "kind": "control",
+          "phase": "Hero Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick an objective wholly within 12 inches. Effect: friendly Skyforge units contesting that objective add 1 to control until your next hero phase.",
+          "legend": "The machine decides where the battle is balanced.",
+          "tags": [
+            "Control"
+          ]
+        },
+        {
+          "name": "Counterweight Surge",
+          "type": "Offensive",
+          "kind": "offensive",
+          "phase": "Charge Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick this unit after it makes a charge move. Effect: roll a die; on a 3+, pick one enemy unit within 1 inch to suffer D3 sample damage.",
+          "legend": "Momentum becomes a verdict.",
+          "tags": [
+            "Impact"
+          ]
+        },
+        {
+          "name": "Battle Damaged: Dragging Gears",
+          "type": "Damage",
+          "kind": "passive",
+          "phase": "Start of Battle",
+          "timing": "Passive",
+          "text": "Effect: while this unit has 7 or fewer health points remaining, subtract 1 from the attacks characteristic of its melee weapons.",
+          "legend": "The engine remembers every dent.",
+          "tags": [
+            "Damage"
+          ]
+        }
+      ],
+      "keywords": [
+        "War Machine",
+        "Skyforge",
+        "Demo"
+      ],
+      "battleProfile": {
+        "role": "War Machine",
+        "regimentOptions": "One Skyforge unit",
+        "notes": "Large sample profile for full-page layout checks."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Argent Fulcrum",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "full-a4",
+        "contentScore": 13.1,
+        "hasOverflowRisk": true
+      }
+    },
+    "emberfen-lancers": {
+      "id": "emberfen-lancers",
+      "sourceUrl": "sample://aos4/emberfen-collegium/emberfen-lancers",
+      "game": "aos4",
+      "faction": "Emberfen Collegium",
+      "name": "Emberfen Lancers",
+      "subtitle": null,
+      "flavorText": "Fast riders who mark safe paths through hot marshlight.",
+      "points": 150,
+      "baseSize": "60 x 35mm oval",
+      "unitSize": "3",
+      "canReinforce": true,
+      "stats": {
+        "move": "10\"",
+        "save": "4+",
+        "control": "1",
+        "health": "3",
+        "ward": null
+      },
+      "weapons": [
+        {
+          "name": "Fen Lance",
+          "type": "melee",
+          "range": null,
+          "attacks": "3",
+          "hit": "4+",
+          "wound": "3+",
+          "rend": "1",
+          "damage": "2",
+          "abilities": [
+            "Charge"
+          ],
+          "hasBattleDamage": false
+        },
+        {
+          "name": "Spark Javelin",
+          "type": "ranged",
+          "range": "10\"",
+          "attacks": "1",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": null,
+          "damage": "1",
+          "abilities": [],
+          "hasBattleDamage": false
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Hot Marsh Sprint",
+          "type": "Movement",
+          "kind": "movement",
+          "phase": "Movement Phase",
+          "timing": "Once per turn",
+          "text": "Effect: this unit can run and still use shooting weapons this turn.",
+          "legend": "Steam marks the safest road.",
+          "tags": [
+            "Move"
+          ]
+        },
+        {
+          "name": "Lanceflare",
+          "type": "Offensive",
+          "kind": "offensive",
+          "phase": "Charge Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick this unit after it charged. Effect: add 1 to wound rolls for its melee weapons for the rest of the turn.",
+          "legend": "The lance tips burn white for a heartbeat.",
+          "tags": [
+            "Charge"
+          ]
+        }
+      ],
+      "keywords": [
+        "Cavalry",
+        "Emberfen",
+        "Demo"
+      ],
+      "battleProfile": {
+        "role": "Cavalry",
+        "regimentOptions": "Any Emberfen unit",
+        "notes": "Demo cavalry profile."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Emberfen Lancers",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "half-a4",
+        "contentScore": 8.8,
+        "hasOverflowRisk": false
+      }
+    },
+    "cinder-scribes": {
+      "id": "cinder-scribes",
+      "sourceUrl": "sample://aos4/emberfen-collegium/cinder-scribes",
+      "game": "aos4",
+      "faction": "Emberfen Collegium",
+      "name": "Cinder Scribes",
+      "subtitle": null,
+      "flavorText": "Archivists who carry glowing ledgers and insist the battle has footnotes.",
+      "points": 120,
+      "baseSize": "32mm round",
+      "unitSize": "1",
+      "canReinforce": false,
+      "stats": {
+        "move": "5\"",
+        "save": "5+",
+        "control": "1",
+        "health": "4",
+        "ward": "6+"
+      },
+      "weapons": [
+        {
+          "name": "Index Staff",
+          "type": "melee",
+          "range": null,
+          "attacks": "3",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": null,
+          "damage": "1",
+          "abilities": [
+            "Measured"
+          ],
+          "hasBattleDamage": false
+        },
+        {
+          "name": "Margin Spark",
+          "type": "ranged",
+          "range": "12\"",
+          "attacks": "2",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": "1",
+          "damage": "1",
+          "abilities": [],
+          "hasBattleDamage": false
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Read The Ash",
+          "type": "Special",
+          "kind": "special",
+          "phase": "Hero Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick one friendly Emberfen unit wholly within 12 inches. Effect: that unit can reroll one hit roll before your next hero phase.",
+          "legend": "The ledger already knows the correction.",
+          "tags": [
+            "Order"
+          ]
+        },
+        {
+          "name": "Footnote Of Denial",
+          "type": "Defensive",
+          "kind": "reaction",
+          "phase": "Defensive Reaction",
+          "timing": "Once per battle round",
+          "text": "Declare: pick this unit when a visible enemy uses an ability. Effect: on a 4+, that ability has no effect on this unit.",
+          "legend": "A careful note can ruin a dramatic moment.",
+          "tags": [
+            "Ward"
+          ]
+        }
+      ],
+      "keywords": [
+        "Hero",
+        "Emberfen",
+        "Wizard (1)"
+      ],
+      "battleProfile": {
+        "role": "Hero",
+        "regimentOptions": "One Emberfen unit",
+        "notes": "Demo hero profile."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Cinder Scribes",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "full-a4",
+        "contentScore": 9.8,
+        "hasOverflowRisk": false
+      }
+    },
+    "furnace-colossus": {
+      "id": "furnace-colossus",
+      "sourceUrl": "sample://aos4/emberfen-collegium/furnace-colossus",
+      "game": "aos4",
+      "faction": "Emberfen Collegium",
+      "name": "Furnace Colossus",
+      "subtitle": null,
+      "flavorText": "A brass-bound giant made for stress-testing large-card composition.",
+      "points": 350,
+      "baseSize": "130mm round",
+      "unitSize": "1",
+      "canReinforce": false,
+      "stats": {
+        "move": "6\"",
+        "save": "3+",
+        "control": "4",
+        "health": "16",
+        "ward": "5+"
+      },
+      "weapons": [
+        {
+          "name": "Pressure Flue",
+          "type": "ranged",
+          "range": "12\"",
+          "attacks": "D3",
+          "hit": "4+",
+          "wound": "3+",
+          "rend": "1",
+          "damage": "2",
+          "abilities": [
+            "Scalding"
+          ],
+          "hasBattleDamage": true
+        },
+        {
+          "name": "Anvil Fist",
+          "type": "melee",
+          "range": null,
+          "attacks": "5",
+          "hit": "4+",
+          "wound": "2+",
+          "rend": "2",
+          "damage": "3",
+          "abilities": [
+            "Crushing"
+          ],
+          "hasBattleDamage": true
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Open The Dampers",
+          "type": "Offensive",
+          "kind": "offensive",
+          "phase": "Hero Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick this unit in your hero phase. Effect: until your next hero phase, add 1 to the attacks characteristic of its melee weapons.",
+          "legend": "Heat becomes enthusiasm with a handle.",
+          "tags": [
+            "Power"
+          ]
+        },
+        {
+          "name": "Pressure Wave",
+          "type": "Control",
+          "kind": "control",
+          "phase": "Combat Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick up to two enemy demo units within 3 inches. Effect: each picked unit has its move characteristic reduced by 1 until the end of the turn.",
+          "legend": "Nobody enjoys standing near the boiler.",
+          "tags": [
+            "Control"
+          ]
+        },
+        {
+          "name": "Cinder Vent",
+          "type": "Damage",
+          "kind": "reaction",
+          "phase": "Combat Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick this unit after it takes damage. Effect: roll a die; on a 4+, one enemy unit within 6 inches suffers 1 sample damage.",
+          "legend": "Loose plates vent sparks in every direction.",
+          "tags": [
+            "Damage"
+          ]
+        },
+        {
+          "name": "Battle Damaged: Cooling Core",
+          "type": "Damage",
+          "kind": "passive",
+          "phase": "Start of Battle",
+          "timing": "Passive",
+          "text": "Effect: while this unit has 8 or fewer health points remaining, subtract 2 inches from its move characteristic.",
+          "legend": "The furnace still walks, but now it thinks about each step.",
+          "tags": [
+            "Damage"
+          ]
+        }
+      ],
+      "keywords": [
+        "Monster",
+        "Emberfen",
+        "Demo"
+      ],
+      "battleProfile": {
+        "role": "Monster",
+        "regimentOptions": "Any Emberfen unit",
+        "notes": "Large sample profile with several abilities."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Furnace Colossus",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "full-a4",
+        "contentScore": 15.9,
+        "hasOverflowRisk": true
+      }
+    },
+    "glimmerdeep-wardens": {
+      "id": "glimmerdeep-wardens",
+      "sourceUrl": "sample://aos4/glimmerdeep-league/glimmerdeep-wardens",
+      "game": "aos4",
+      "faction": "Glimmerdeep League",
+      "name": "Glimmerdeep Wardens",
+      "subtitle": null,
+      "flavorText": "Steady protectors carrying lanterns, ledgers, and unreasonable confidence.",
+      "points": 100,
+      "baseSize": "32mm round",
+      "unitSize": "10",
+      "canReinforce": true,
+      "stats": {
+        "move": "5\"",
+        "save": "4+",
+        "control": "1",
+        "health": "2",
+        "ward": null
+      },
+      "weapons": [
+        {
+          "name": "Lantern Pike",
+          "type": "melee",
+          "range": null,
+          "attacks": "2",
+          "hit": "4+",
+          "wound": "3+",
+          "rend": "1",
+          "damage": "1",
+          "abilities": [
+            "Shielded"
+          ],
+          "hasBattleDamage": false
+        },
+        {
+          "name": "Glimmer Bolt",
+          "type": "ranged",
+          "range": "12\"",
+          "attacks": "1",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": null,
+          "damage": "1",
+          "abilities": [],
+          "hasBattleDamage": false
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Lantern Wall",
+          "type": "Defensive",
+          "kind": "defensive",
+          "phase": "End of Turn",
+          "timing": "Once per turn",
+          "text": "Declare: pick this unit if it did not move this turn. Effect: until your next movement phase, add 1 to save rolls for this unit.",
+          "legend": "Light makes a wall if everyone agrees.",
+          "tags": [
+            "Ward"
+          ]
+        },
+        {
+          "name": "Measured Advance",
+          "type": "Movement",
+          "kind": "passive",
+          "phase": "Passive",
+          "timing": "Passive",
+          "text": "Effect: this unit can ignore the first modifier to its move characteristic each turn.",
+          "legend": "The map is drawn on the inside of every shield.",
+          "tags": [
+            "Move"
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Glimmerdeep",
+        "Demo"
+      ],
+      "battleProfile": {
+        "role": "Infantry",
+        "regimentOptions": "Any Glimmerdeep unit",
+        "notes": "Demo infantry profile."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Glimmerdeep Wardens",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "half-a4",
+        "contentScore": 8.8,
+        "hasOverflowRisk": false
+      }
+    },
+    "prismbound-envoys": {
+      "id": "prismbound-envoys",
+      "sourceUrl": "sample://aos4/glimmerdeep-league/prismbound-envoys",
+      "game": "aos4",
+      "faction": "Glimmerdeep League",
+      "name": "Prismbound Envoys",
+      "subtitle": null,
+      "flavorText": "Diplomats who arrive before the invitation and leave after the mirror stops ringing.",
+      "points": null,
+      "baseSize": "60 x 35mm oval",
+      "unitSize": null,
+      "canReinforce": true,
+      "stats": {
+        "move": "7\"",
+        "save": "5+",
+        "control": "2",
+        "health": "3",
+        "ward": null
+      },
+      "weapons": [
+        {
+          "name": "Facet Sabre",
+          "type": "melee",
+          "range": null,
+          "attacks": "3",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": null,
+          "damage": "1",
+          "abilities": [
+            "Reflective"
+          ],
+          "hasBattleDamage": false
+        },
+        {
+          "name": "Prism Dart",
+          "type": "ranged",
+          "range": "16\"",
+          "attacks": "2",
+          "hit": "4+",
+          "wound": "4+",
+          "rend": "1",
+          "damage": "1",
+          "abilities": [],
+          "hasBattleDamage": false
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Diplomatic Refraction",
+          "type": "Special",
+          "kind": "special",
+          "phase": "Hero Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick this unit in your hero phase. Effect: pick one visible friendly unit within 12 inches; it can move 2 inches after this ability resolves.",
+          "legend": "A polite angle changes the whole room.",
+          "tags": [
+            "Move"
+          ]
+        },
+        {
+          "name": "Mirror Clause",
+          "type": "Defensive",
+          "kind": "reaction",
+          "phase": "Defensive Reaction",
+          "timing": "Once per phase",
+          "text": "Declare: pick this unit when it is picked as the target of a shooting attack. Effect: subtract 1 from hit rolls for that attack.",
+          "legend": "The first answer is always reflected.",
+          "tags": [
+            "Ward"
+          ]
+        }
+      ],
+      "keywords": [
+        "Cavalry",
+        "Glimmerdeep",
+        "Demo"
+      ],
+      "battleProfile": {
+        "role": "Cavalry",
+        "regimentOptions": "Any Glimmerdeep unit",
+        "notes": "Intentionally missing points and unit size for filter checks."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Prismbound Envoys",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "full-a4",
+        "contentScore": 9.8,
+        "hasOverflowRisk": false
+      }
+    },
+    "lantern-bastion": {
+      "id": "lantern-bastion",
+      "sourceUrl": "sample://aos4/glimmerdeep-league/lantern-bastion",
+      "game": "aos4",
+      "faction": "Glimmerdeep League",
+      "name": "Lantern Bastion",
+      "subtitle": null,
+      "flavorText": "A slow tower of glass and gears that turns dark corners into maps.",
+      "points": 280,
+      "baseSize": "105 x 70mm oval",
+      "unitSize": "1",
+      "canReinforce": false,
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "3",
+        "health": "12",
+        "ward": null
+      },
+      "weapons": [
+        {
+          "name": "Beacon Array",
+          "type": "ranged",
+          "range": "20\"",
+          "attacks": "4",
+          "hit": "3+",
+          "wound": "3+",
+          "rend": "1",
+          "damage": "2",
+          "abilities": [
+            "Guided"
+          ],
+          "hasBattleDamage": true
+        },
+        {
+          "name": "Foundation Maul",
+          "type": "melee",
+          "range": null,
+          "attacks": "4",
+          "hit": "4+",
+          "wound": "2+",
+          "rend": "2",
+          "damage": "3",
+          "abilities": [
+            "Anchored"
+          ],
+          "hasBattleDamage": true
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Raise The Beacon",
+          "type": "Shooting",
+          "kind": "shooting",
+          "phase": "Shooting Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick one visible friendly Glimmerdeep unit. Effect: add 1 to hit rolls for that unit's shooting weapons until the end of the turn.",
+          "legend": "The tower points and everyone understands.",
+          "tags": [
+            "Guide"
+          ]
+        },
+        {
+          "name": "Anchor Lamps",
+          "type": "Control",
+          "kind": "passive",
+          "phase": "Passive",
+          "timing": "Passive",
+          "text": "Effect: enemy demo units within 6 inches cannot use abilities that would move them more than 3 inches after deployment.",
+          "legend": "The light pins every shadow to the floor.",
+          "tags": [
+            "Control"
+          ]
+        },
+        {
+          "name": "Glasswork Recalibration",
+          "type": "Special",
+          "kind": "special",
+          "phase": "Hero Phase",
+          "timing": "Once per turn",
+          "text": "Declare: pick this unit in your hero phase. Effect: heal 1 sample damage allocated to this unit.",
+          "legend": "A lens turns, and the crack becomes a line.",
+          "tags": [
+            "Heal"
+          ]
+        },
+        {
+          "name": "Battle Damaged: Shuttered Lens",
+          "type": "Damage",
+          "kind": "passive",
+          "phase": "Start of Battle",
+          "timing": "Passive",
+          "text": "Effect: while this unit has 6 or fewer health points remaining, subtract 1 from the attacks characteristic of its ranged weapons.",
+          "legend": "The beacon still shines, but only through one good pane.",
+          "tags": [
+            "Damage"
+          ]
+        }
+      ],
+      "keywords": [
+        "War Machine",
+        "Glimmerdeep",
+        "Demo"
+      ],
+      "battleProfile": {
+        "role": "War Machine",
+        "regimentOptions": "One Glimmerdeep unit",
+        "notes": "Large sample support profile."
+      },
+      "source": {
+        "fetchedAt": null,
+        "sourceType": "synthetic-sample-csv-export",
+        "sourceVersion": "Synthetic sample dataset 2026-06-20",
+        "rawTitle": "Lantern Bastion",
+        "publication": "Synthetic Field Almanac",
+        "publicationType": "sample",
+        "errataDate": null,
+        "errataLink": null
+      },
+      "layoutHints": {
+        "recommendedSize": "full-a4",
+        "contentScore": 15.9,
+        "hasOverflowRisk": true
+      }
+    }
+  },
+  "warnings": []
+}
